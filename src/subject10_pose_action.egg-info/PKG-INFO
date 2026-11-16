@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: subject10-pose-action
+Version: 0.1.0
+Summary: Subject 10 - 2D Pose Estimation and Action Analysis
+Requires-Python: >=3.11
+Requires-Dist: ultralytics
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: joblib
+Requires-Dist: matplotlib
+Requires-Dist: torch
+Requires-Dist: tqdm

@@ -62,7 +62,6 @@ def parse_args():
     )
     return parser.parse_args()
 
-
 def main() -> None:
     # ==============================================
     # ④ 입력 이미지와 AI 실행환경 확인
@@ -71,7 +70,6 @@ def main() -> None:
     # 이미지 파일이 없으면 오류를 발생시킵니다.
     # 설정 파일에서 모델과 실행 장치 정보를 읽습니다.
     # CPU 또는 GPU 실행환경을 결정합니다.
-
     args = parse_args()
     source = Path(args.source)
 
@@ -88,7 +86,6 @@ def main() -> None:
     # 입력 이미지에서 사람을 검출합니다.
     # 검출된 사람의 관절 좌표를 추정합니다.
     # 결과가 없으면 오류를 발생시킵니다.
-
     model = YOLO(config["pose_model"])
 
     result = model.predict(
@@ -113,7 +110,6 @@ def main() -> None:
     # GPU Tensor를 CPU NumPy 배열로 변환합니다.
     # 관절별 Confidence도 함께 가져옵니다.
     # Confidence 정보가 없다면 기본값 1.0을 사용합니다.
-
     keypoints = result.keypoints.xy[0].cpu().numpy()
 
     if result.keypoints.conf is not None:
